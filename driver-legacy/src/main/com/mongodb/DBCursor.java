@@ -110,7 +110,7 @@ public class DBCursor implements Cursor, Iterable<DBObject> {
         this(collection, query, new DBCollectionFindOptions().projection(fields).readPreference(readPreference), retryReads);
     }
 
-    DBCursor(final DBCollection collection, @Nullable final DBObject filter, final DBCollectionFindOptions findOptions) {
+    protected DBCursor(final DBCollection collection, @Nullable final DBObject filter, final DBCollectionFindOptions findOptions) {
         this(collection, filter, findOptions, true);
     }
 

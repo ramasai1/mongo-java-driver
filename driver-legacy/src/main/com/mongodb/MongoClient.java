@@ -809,7 +809,7 @@ public class MongoClient implements Closeable {
     }
 
     // Leave as package-protected so that unit tests can spy on it.
-    OperationExecutor getOperationExecutor() {
+    public OperationExecutor getOperationExecutor() {
         return delegate.getOperationExecutor();
     }
 

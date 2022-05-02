@@ -77,7 +77,7 @@ public class DB {
     private volatile WriteConcern writeConcern;
     private volatile ReadConcern readConcern;
 
-    DB(final MongoClient mongo, final String name, final OperationExecutor executor) {
+    protected DB(final MongoClient mongo, final String name, final OperationExecutor executor) {
         checkDatabaseNameValidity(name);
         this.mongo = mongo;
         this.name = name;
